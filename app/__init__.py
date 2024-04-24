@@ -16,7 +16,8 @@ login_manager.login_message_category = 'info'
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'your_secret_key'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pnXcwHvscCfVXkwhyINtmbhFARazQbCV@monorail.proxy.rlwy.net:55608/railway'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:pnXcwHvscCfVXkwhyINtmbhFARazQbCV@monorail.proxy.rlwy.net:55608/railway' #MySQL DB
+
 
     db.init_app(app)
     migrate.init_app(app, db)
