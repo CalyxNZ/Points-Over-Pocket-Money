@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+<div class="login-container">
+  <h1 id="app-title">Kids Point Tracker App</h1>
+  <form action="/login" method="post" class="form-login">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+  <a href="/register" class="register-link">Register</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Use a more modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e7eff9; /* Soft blue background */
+  color: #333; /* Darker text for better readability */
+}
+
+.main-container,
+.login-container,
+.register-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#app-title {
+  font-size: 28px; /* Slightly larger for emphasis */
+  font-weight: 600; /* Bold but not too bold */
+  text-align: center;
+  margin-bottom: 30px; /* More space around the title */
+  color: #2c3e50; /* Dark blue for elegance */
+}
+
+#total-points {
+  font-size: 22px; /* Larger font size for emphasis */
+  text-align: center;
+  margin-bottom: 30px; /* More space above the chart */
+  color: #27ae60; /* Soft green for a success look */
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#points-form {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  gap: 15px; /* More space between form elements */
+}
+
+input[type=number],
+input[type=text],
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  background: #e7eff9; /* Match the body background for a blend-in style */
+  /* Outer shadow for raised effect */
+  box-shadow: 4px 4px 8px #b8c1cc, /* Outer bottom-right shadow */
+              -4px -4px 8px #ffffff; /* Outer top-left highlight */
+  font-size: 16px; /* Slightly larger font for ease of reading */
+}
+
+button {
+  background-color: #4CAF50; /* A more vibrant green for the primary action */
+  color: white;
+  font-weight: bold; /* Make the button text pop */
+  text-transform: uppercase; /* A bit of style for the button */
+  letter-spacing: 1px; /* Spacing out the letters for that modern touch */
+  transition: box-shadow 0.3s ease, transform 0.1s; /* Smooth transition for click and hover effects */
+}
+
+button:active {
+  transform: translateY(2px); /* Push the button down on click */
+  box-shadow: 2px 2px 4px #b8c1cc; /* Slight shadow for a clicked effect */
+}
+
+button:hover {
+  box-shadow: 6px 6px 12px #b8c1cc, /* Deeper shadow to lift the button */
+              -6px -6px 12px #ffffff; /* White highlight for more depth */
+  transform: translateY(-2px);
+}
+
+.history-container {
+  margin-top: 30px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4CAF50; /* Match the button color for consistency */
+  padding: 15px;
+  font-weight: bold;
+  color: white; /* White text for contrast */
+  border-radius: 8px; /* Consistent rounded corners */
+}
+
+.history-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05); /* Slight shadow for each entry */
+}
+
+/* Add responsive touch for smaller devices */
+@media (max-width: 768px) {
+  .main-container,
+  .login-container,
+  .register-container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  #app-title, #total-points {
+    font-size: 20px;
+  }
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type='email'],
+.form-group input[type='password'] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.form-group button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Continue with the rest of your styles... */
