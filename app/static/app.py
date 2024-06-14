@@ -7,7 +7,9 @@ import os
 # Setup Flask and the database
 app = Flask(__name__)
 app.secret_key = 'secret_key'  # Change this to a random secret key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///points.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///points.db' //SQLite db
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pnXcwHvscCfVXkwhyINtmbhFARazQbCV@monorail.proxy.rlwy.net:55608/railway' #MySQL DB
+
 db = SQLAlchemy(app)
 db.create_all()
 
